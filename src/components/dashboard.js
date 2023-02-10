@@ -11,7 +11,7 @@ function Dashboard() {
     }
     return (
         <div>
-            <h2 style={{ color: 'black' }}>Saved Tasks</h2>
+            <h2 style={{ color: '' }}>Saved Tasks</h2>
             <div className="card">
                 <h4 style={{}}>{conct()}</h4>
                 <div className='bx'>
