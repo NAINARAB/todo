@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+}
+
+.main {
+    background-image: url('https://cdn.pixabay.com/photo/2017/02/23/21/41/wall-2093277_960_720.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: prosans;
+    height: 1220px;
+}
+
+@font-face {
+    font-family: prosans;
+    src: url(../Product\ Sans\ Regular.ttf);
+}
+
+.headder {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    padding: 2em;
+    background: linear-gradient(to left, #f2709c, #ff9472);
+    overflow: hidden;
+    color: #192a56;
+    border-bottom: 8px solid gold;
+    box-shadow: 0px 4px 8px black;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.logbtn {
+    background: #fbc531;
+    position: absolute;
+    right: 30px;
+    border: none;
+    border-radius: 50%;
+    padding: 3px 3px 0px 3px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0);
+    transition: all 0.3s;
+}
+
+.logbtn:active {
+    box-shadow: none;
+    transform: translateY(2px);
+}
+
+
+
+
+
+
+
+.cntr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar {
+    height: 150px;
+    width: 150px;
+    border: none;
+    border-radius: 50%;
+}
+
+.formpopup {
+    position: fixed;
+    left: 50%;
+    background: linear-gradient(to right, #c2e59c, #64b3f4);
+    padding: 30px 40px;
+    top: 25%;
+    transform: translate(-50%, 5%);
+    border: none;
+    border-radius: 20px;
+    z-index: 9;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 16px black;
+    animation: fadeing 1s;
+}
+
+@keyframes fadeing {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+/* main content */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.inppt {
+    width: 100%;
+    min-width: 250px;
+    margin: 10px auto;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.3s;
+
+}
+
+.inppt:focus {
+    box-shadow: 0px 0px 32px #f368e0;
+    transform: translateY(-2px);
+}
+
+.btn {
+    margin: 10px;
+    padding: 8px 25px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-family: prosans;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    box-shadow: 2px 2px 4px black;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    box-shadow: none;
+    transform: translateY(2px);
+}
+
+.link {
+    background-color: transparent;
+    border: none;
+    margin-top: 5px;
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.card{
+    background-color: rgba(255, 255, 255, 0.898);
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px;
+}
+
+
+
+

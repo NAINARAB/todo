@@ -1,0 +1,113 @@
+* {
+    font-family: prosans;
+}
+
+.hed {
+    color: white;
+
+}
+
+.card {
+    border-bottom: 2px solid rgb(138, 132, 132);
+    border-radius: 6px;
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin: 5px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.addbtn {
+    border: none;
+    border-radius: 50%;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 8px 20px 10px 20px;
+    box-shadow: 2px 2px 8px black;
+    background-color: deepskyblue;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.addbtn:active {
+    box-shadow: none;
+    transform: translateY(2px);
+}
+
+.adbtnposition {
+    position: fixed;
+    bottom: 3%;
+    right: 2%;
+}
+
+.tinpt {
+    outline: none;
+    padding: 10px;
+    border-radius: 14px;
+    background-color: white;
+    border: none;
+    box-sizing: border-box;
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+.tyminpt {
+    outline: none;
+    padding: 10px;
+    border-radius: 14px;
+    background-color: white;
+    border: none;
+    box-sizing: border-box;
+    width: 20%;
+    margin: 0px 10px 0px 10px;
+    height: 2.5em;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+.inpt:focus,
+.tyminpt:focus {
+    box-shadow: 2px 2px 4px rgb(131, 131, 71);
+    transform: translateY(-2px);
+}
+
+.btn {
+    border: none;
+    border-radius: 20px;
+    padding: 10px 40px;
+    background-color: rgb(146, 240, 3);
+    color: black;
+    box-shadow: 2px 2px 3px black;
+    margin: 20px;
+    font-weight: bold;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.bx{
+    padding: 5px 15px;
+    border-bottom:2px inset rgb(186, 182, 182);
+    background:linear-gradient(to top, transparent 0%, #dfe6e9 );
+    border-radius: 10px;
+    margin:6px;
+    transition: all 0.3s;  
+}
+.bx:hover{
+    box-shadow: 1px 1px 3px black;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    box-shadow: none;
+    transform: translateY(2px);
+}
+.fadin{
+    animation: fadeing1 1s;
+}
+@keyframes fadeing1 {
+    0%   {position: absolute; right: 0%;opacity: 0;}
+    50%  {position: absolute; left: 50%;opacity: 0.5;}
+    100% {position: absolute; left: 1.3%;opacity: 1;}
+}

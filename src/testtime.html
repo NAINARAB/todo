@@ -1,0 +1,79 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="time" id="userinpt" />
+    <input type="time" id="duration" value="00:00" />
+    <button id="sub" onclick="calcul()">but</button>
+
+    <p id="pri"></p>
+    <p id="prinnt"></p>
+    <p id="timme"></p>
+</body>
+
+
+
+
+<script>
+
+
+
+    function calcul() {
+        var a = 1;
+        var fulhr = 24; var fulmin = 60;
+        var curtym = new Date();
+        var mesg = 'Task Completed';
+        var curtmobj = parseInt(curtym.getHours());
+        var curminobj = parseInt(curtym.getMinutes());
+        var crntsecobj = parseInt(curtym.getSeconds());
+        var x = document.getElementById('userinpt').value;
+        var y = document.getElementById('duration').value;
+        var sepinpt = x.split(':');
+        var sepdur = y.split(':');
+        var targethour = parseInt(sepinpt[0]) + parseInt(sepdur[0]);
+        if (targethour > 23) {
+            targethour = parseInt(targethour) - fulhr;
+        }
+
+        var targetmin = parseInt(sepinpt[1]) + parseInt(sepdur[1]);
+        if (targetmin > 59 && targethour < 23) {
+            targethour = parseInt(targethour) + parseInt(a);
+            targetmin = parseInt(targetmin) - fulmin;
+        }
+        if (targetmin > 59 && targethour == 23) {
+            targethour = 0;
+            targetmin = parseInt(targetmin) - fulmin;
+        }
+
+
+        //calcuation of balance time
+
+        var balnmin = parseInt(targetmin) - parseInt(curminobj);
+        var blnstym = parseInt(targethour) - parseInt(curtmobj);
+
+        if (balnmin < 0 && blnstym > 0) {
+            blnstym = blnstym - a;
+            balnmin = fulmin + balnmin;
+        }
+        if (balnmin < 0 && blnstym == 0) {
+            balnmin = 0;
+            document.getElementById('compt').innerHTML = mesg;
+        }
+        document.getElementById('prinnt').innerHTML = "End Time : " + targethour + ' : ' + targetmin;
+        document.getElementById('pri').innerHTML = "Balance time : " + blnstym + ' : ' + balnmin;
+        document.getElementById('timme').innerHTML = "Current time : " + curtmobj + ' : ' + curminobj + ' : ' + crntsecobj;
+        if (balnmin > -1) {
+            setInterval(calcul, 1000);
+        }
+    }
+
+</script>
+
+</html>

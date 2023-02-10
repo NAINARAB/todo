@@ -1,0 +1,64 @@
+	
+
+
+dashboard
+	-statistics
+	-activity
+
+customers
+	-add
+	-edit
+	-delete
+
+purchase
+	-add
+	-edit
+	-delete
+	
+stock 
+	-edit(name, count, price)
+	-delete
+	-add stock
+
+sales
+	-new 
+	-edit
+	-delete
+
+SUB MENU
+
+sales return
+	-add
+	-edit
+	-delete
+
+sales income
+	-edit(add pay, bad dept, discount)
+
+
+purchase payment
+	-edit(pay, add discount)
+
+account management
+	-user pass mobile email update	
+	
+	
+	
+ADVANCED CONCEPTS:
+
+Customer account
+	-manage account(edit password)
+	-dashboard
+	-order goods
+	-pay for purchase
+	-purchase history
+	-view products
+	
+	
+customer registration
+
+
+gendral user view:
+	-view products
+	-display contacts 
+	
