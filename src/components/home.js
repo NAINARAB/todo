@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Dashboard from "./dashboard";
 import Customer from "./customer";
-
+import { useState,useEffect } from "react";
 function Home() {
 
     const navigate = useNavigate();
@@ -132,7 +132,8 @@ function Home() {
             <div className="formpopup" style={{ display: 'none' }} id='login'>
                 <div className='cntr' style={{ flexDirection: 'column' }} >
                     <img src='https://cdn.pixabay.com/photo/2016/08/31/11/54/icon-1633249_960_720.png' className="avatar" alt="avatar" />
-                    <h3>Login</h3>
+                    <h3>User</h3>
+                    <h3>{currentUser}</h3>
                         <div className="cntr" >
                             <button type="submit" className="btn" onClick={logmeout}>LogOut</button>
                             <button className="btn" onClick={closelogin} >Close</button>

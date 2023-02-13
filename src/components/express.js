@@ -98,4 +98,29 @@ app.post("/login", (req, res) => {
 
 
 
+
+// posting of tasks in to todo_tasks table
+
+app.post("/addtasks", (req, res) => {
+  data = req.body
+  console.log(data);
+  try {
+    client.query(
+      `INSERT INTO "todo_tasks" ("email","tasks","starttime","duration",message)  
+                     VALUES ($1,$2,$3,$4,$5)`, [data.email, data.task, data.starttime, data.duration, data.message]); // sends queries
+  }
+
+
+  catch (error) {
+    console.error(error.stack);
+  } finally {
+  }
+  res.end()
+})
+
+
+
+
+
+
 client.connect();

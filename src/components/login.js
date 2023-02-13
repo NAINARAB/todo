@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 function Login() {
 
-  var passuser;
+
 
   {/* REGISTER SCRIPT */}
 
@@ -105,7 +105,7 @@ function Login() {
             
             let id = JSON.parse(response.data.data)
             console.log("before navifgate",id)
-            sessionStorage.setItem("id",id.id)
+            sessionStorage.setItem("id",id.email)
             getdetails(id.id);
             navigate('/home')
             

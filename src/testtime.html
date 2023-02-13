@@ -8,10 +8,11 @@
 </head>
 
 <body>
-
-    <input type="time" id="userinpt" />
-    <input type="time" id="duration" value="00:00" />
-    <button id="sub" onclick="calcul()">but</button>
+    Choose task starting time:
+    <input type="time" id="userinpt" /><br>
+    Choose task Durartion:
+    <input type="time" id="duration" value="00:00" /><br>
+    <button id="sub" onclick="calcul()">Calculate</button>
 
     <p id="pri"></p>
     <p id="prinnt"></p>
@@ -30,33 +31,40 @@
         var fulhr = 24; var fulmin = 60;
         var curtym = new Date();
         var mesg = 'Task Completed';
-        var curtmobj = parseInt(curtym.getHours());
-        var curminobj = parseInt(curtym.getMinutes());
-        var crntsecobj = parseInt(curtym.getSeconds());
+        var curtmobj = curtym.getHours();
+        var curminobj = curtym.getMinutes();
+        var crntsecobj = curtym.getSeconds();
         var x = document.getElementById('userinpt').value;
         var y = document.getElementById('duration').value;
+        // spliting the data
+
         var sepinpt = x.split(':');
         var sepdur = y.split(':');
+
+
+        //  calculating the task-end time
         var targethour = parseInt(sepinpt[0]) + parseInt(sepdur[0]);
+        
         if (targethour > 23) {
-            targethour = parseInt(targethour) - fulhr;
+            targethour = parseInt(targethour) - fulhr;//if the hour is grater than 23 then it will be subracted with 24
         }
 
-        var targetmin = parseInt(sepinpt[1]) + parseInt(sepdur[1]);
+        var targetmin = parseInt(sepinpt[1]) + parseInt(sepdur[1]);//if the minutes grater than 60 -> 60-min & increse 1 hour 
         if (targetmin > 59 && targethour < 23) {
             targethour = parseInt(targethour) + parseInt(a);
             targetmin = parseInt(targetmin) - fulmin;
         }
-        if (targetmin > 59 && targethour == 23) {
+        if (targetmin > 59 && targethour == 23) { //reset hour
             targethour = 0;
             targetmin = parseInt(targetmin) - fulmin;
         }
+        
 
 
         //calcuation of balance time
 
         var balnmin = parseInt(targetmin) - parseInt(curminobj);
-        var blnstym = parseInt(targethour) - parseInt(curtmobj);
+        var blnstym = parseInt(targethour) - parseInt(curtmobj);//task end time - current time if task started
 
         if (balnmin < 0 && blnstym > 0) {
             blnstym = blnstym - a;
